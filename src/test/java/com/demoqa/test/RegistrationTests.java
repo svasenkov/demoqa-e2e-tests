@@ -1,5 +1,6 @@
 package com.demoqa.test;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 public class RegistrationTests extends TestBase {
 
     @Test
-    @Tag("remote")
+    @DisplayName("Успешная регистрация")
     void successfulRegistrationTest() {
         String userName = "Alex";
 
@@ -51,6 +52,7 @@ public class RegistrationTests extends TestBase {
     }
 
     @Test
+    @DisplayName("Неуспешная регистрация с невалидным емайлом")
     void wrongEmailTest() {
 
     }
